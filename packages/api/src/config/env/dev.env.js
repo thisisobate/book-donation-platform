@@ -1,6 +1,8 @@
-{
+const { DB_KEY } = process.env;
+
+const devConfig =  {
   "APP_NAME": "api",
-  "MONGODB_URI": "mongodb+srv://admin:E7DDi1QMRxS3mUwh@cluster0.8nphg85.mongodb.net/?retryWrites=true&w=majority",
+  "MONGODB_URI": `mongodb+srv://admin:${DB_KEY}@cluster0.8nphg85.mongodb.net/?retryWrites=true&w=majority`,
   "JWT_SECRET": "XXXX-XXXX-XXXX",
   "BCRYPT_SALT": 10,
   "role": {
@@ -21,4 +23,7 @@
     "DOMAIN": ""
   }
 }
+
+module.exports = devConfig;
+
    

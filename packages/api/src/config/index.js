@@ -1,7 +1,7 @@
 const env = process.env.NODE_ENV
 
 const environments = {
-     development: require("./env/dev.env.json"),
+     development: require("./env/dev.env.js"),
      production: require("./env/prod.env.json")
 }
 
