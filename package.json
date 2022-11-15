@@ -1,0 +1,15 @@
+{
+  "name": "book-donation-platform",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/thisisobate/book-donation-platform.git",
+  "author": "uchechukwu obasi",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "client": "yarn workspace client dev",
+    "server": "yarn workspace api dev"
+  }
+}

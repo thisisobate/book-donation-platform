@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/18.10.0/bin/node /usr/local/bin/yarn init
+  /usr/local/Cellar/node/18.10.0/bin/node /usr/local/bin/yarn client
 
 PATH: 
   /Users/obate/.rbenv/shims:/Users/obate/.yarn/bin:/Users/obate/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/obate/go/bin:/usr/local/opt/go/libexec/bin
@@ -14,20 +14,26 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:137143:13)
-      at Interface.emit (node:events:513:28)
-      at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1124:18)
-      at ReadStream.onkeypress (node:internal/readline/interface:273:20)
-      at ReadStream.emit (node:events:513:28)
-      at emitKeys (node:internal/readline/utils:357:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
-      at ReadStream.emit (node:events:513:28)
-      at addChunk (node:internal/streams/readable:324:12)
+  SyntaxError: /Users/obate/projects/github.com/book-donation-platform/package.json: Unexpected token } in JSON at position 319
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
 
 npm manifest: 
-  No manifest
+  {
+    "name": "book-donation-platform",
+    "version": "1.0.0",
+    "repository": "https://github.com/thisisobate/book-donation-platform.git",
+    "author": "uchechukwu obasi",
+    "license": "MIT",
+    "workspaces": ["packages/*"],
+    "scripts": {
+      "client": "yarn workspace client dev",
+      "server": "yarn workspace api dev",
+  }
+  }
 
 yarn manifest: 
   No manifest
