@@ -82,8 +82,8 @@ function App() {
       <main className="app">
         <section>
           <p>Recently donated:</p>
-          <div className="grid">
             {bookList?.data.length === 0 && <p>No books found in the library.</p>}
+          <div className="grid">
             {bookList?.data.map((book: { [x: string]: string }) => (
               <BookList
                 key={book["_id"]}
