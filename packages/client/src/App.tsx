@@ -5,6 +5,7 @@ import happyPride from "./assets/Happy Pride! - Donut.png";
 import peepsTogether from "./assets/open-peeps-together.png";
 import streetLife from "./assets/Street Life - Couple of Friends.png";
 import { BookList } from "./components/BookList";
+import { config } from '../baseConfig';
 import Modal from "react-modal";
 import axios from "axios";
 
@@ -23,7 +24,8 @@ function App() {
   });
   const [bookList, setBookList] = useState<bookType | null>(null);
   const formRef = useRef() as React.MutableRefObject<HTMLFormElement>;
-  const baseURL = "http://localhost:2020/api/books";
+  const base = config.baseUrl || "http://localhost:2020";
+  const baseURL = `${base}/api/books`;
 
   const customStyles = {
     content: {
